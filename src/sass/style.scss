@@ -1,1 +1,139 @@
 /* main */
+@import 'base/reset';
+@import 'base/typography.scss';
+
+//custom properties
+:root {
+    //Font styles
+    --link-font: "Foldit" ;
+    --navbar-font: 'Castoro Titling';
+    --subText-font: "Nunito Sans";
+
+
+    //Font sizes
+    --heading-text: clamp(1.5rem, 4.5vw, 10rem);
+    --subHeading-text: clamp(1rem, 3vw, 3rem);
+
+    //Font color
+    --h1-color: hsl(228, 44%, 23%);
+    --h2-color: hsl(229, 74%, 32%);
+    --p-color: hsl(228, 100%, 36%);
+    //Background color
+    --body-background: hsla(0, 0%, 57%, 0);
+    --navbar-background: hsla(0, 0%, 57%, 0.205);
+    --header-background: hsl(0, 0%, 75%);
+}
+html {
+    height: 100%;
+}
+body{
+    font-family: 'Castoro Titling', sans-serif;
+    background-image: linear-gradient(to bottom right, hsla(120, 100%, 25%, 0.493), hsla(350, 100%, 88%, 0.63) );
+    color: var(--h2-color);
+    padding: 6%;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.skip-link {
+    position: absolute;
+    z-index: -10000;
+    color: var(--body-background);
+}
+    .skip-link:focus {
+        z-index: 10;
+        color: var(--h1-color);
+    } 
+p{
+    font-family: "Nunito Sans";
+    color: var(--p-color);
+    text-align: left;
+}
+h1{
+    font-size: var(--heading-text);
+    color: var(--h1-color);
+    position: relative;
+    animation-name: slide;
+    animation-duration: 3s;
+}
+.title{
+    text-align: center;
+    border: solid rgb(14, 14, 14) 3px;
+    background-color: var(--header-background);
+    border-end-end-radius: 80px 80px;
+}
+h2{
+    font-size: var(--subHeading-text);
+    color: var(--h2-color);
+
+}
+.header-back-color{
+    height: auto;
+    width: 100%;
+    background-color: var(--header-background);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+h2:hover{
+    text-decoration:underline;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+}
+svg{
+    margin-top: 1%;
+    height: max(1.1vw, 15px);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 2%;
+    background-image: linear-gradient(to bottom right, hsl(350, 100%, 88%), hsla(120, 100%, 25%, 0.849) );
+}
+
+.link-github{
+    display: table;
+    margin: 0 auto;
+    padding-top: 6%;
+}
+span {
+    display: table;
+    margin: 0 auto;
+}
+.click-me{
+    background-color: var(--header-background);
+    justify-content: center;
+
+}
+.centered{
+    text-align: center;
+    padding: 6%;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 10s;
+}
+@keyframes slide {
+    0%   {left:-900px; top:0px;}
+    25%  {left:0px; top:0px;}
+}
+@media (prefers-reduced-motion) {
+    .centered {
+      animation: none;
+    }
+  }
+// header a.link-github {
+//     max-width: 12rem;
+//     margin: 0 auto;
+//     padding: 0.25em 1em;
+//     text-decoration: none;
+//     font-size: --subText-font;
+//     text-align: center;
+// }
