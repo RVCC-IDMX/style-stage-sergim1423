@@ -21,7 +21,7 @@
     //Background color
     --body-background: hsla(0, 0%, 57%, 0);
     --navbar-background: hsla(0, 0%, 57%, 0.205);
-    --header-background: hsl(0, 0%, 75%);
+    --header-background: hsla(351, 91%, 91%, 0.842);
 }
 html {
     height: 100%;
@@ -60,8 +60,10 @@ h1{
 .title{
     text-align: center;
     border: solid rgb(14, 14, 14) 3px;
-    background-color: var(--header-background);
+    background-image: linear-gradient(to bottom right, hsla(120, 100%, 25%, 0.493), hsla(350, 100%, 88%, 0.63) );
     border-end-end-radius: 80px 80px;
+    border-end-start-radius: 80px 80px;
+
 }
 h2{
     font-size: var(--subHeading-text);
@@ -71,10 +73,11 @@ h2{
 .header-back-color{
     height: auto;
     width: 100%;
-    background-color: var(--header-background);
+    background-image: linear-gradient(to bottom right,  hsla(350, 100%, 88%, 0.63), hsla(120, 100%, 25%, 0.493) );
     position: sticky;
     top: 0;
     z-index: 10000;
+    border-radius: 15px;
 }
 h2:hover{
     text-decoration:underline;
@@ -97,6 +100,36 @@ svg{
     gap: 5px;
     padding: 2%;
     background-image: linear-gradient(to bottom right, hsl(350, 100%, 88%), hsla(120, 100%, 25%, 0.849) );
+    border-radius: 15px;
+
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style-type: none;
+
+}
+.features__box{
+    border-radius: 10px;
+    border: solid rgb(14, 14, 14) 3px;
+    padding: 12px;
+    background-image: linear-gradient(to bottom right, hsl(350, 100%, 88%), hsla(120, 100%, 25%, 0.534) );
+    cursor: pointer;
+}
+.link-allstyles{
+    border-radius: 10px;
+    padding: 2%;
+    border: solid black 2px;
+    background-color: var(--header-background);
+    display:block; 
+    width:min-content; 
+    margin:0 auto;
+}
+.link-allstyles:hover{
+    background-color: var(--body-background);
 }
 
 .link-github{
@@ -109,10 +142,12 @@ span {
     margin: 0 auto;
 }
 .click-me{
-    background-color: var(--header-background);
+    background-image: linear-gradient(to bottom right, hsla(120, 100%, 25%, 0.493), hsla(350, 100%, 88%, 0.63) );
     justify-content: center;
-
+    border-start-start-radius: 40px 40px;
+    border-start-end-radius: 40px 40px;
 }
+
 .centered{
     text-align: center;
     padding: 6%;
