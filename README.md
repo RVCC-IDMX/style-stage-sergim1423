@@ -1,6 +1,4 @@
-# Mobile Rules
-
-A page with minimal mobile-first styling using a reset/normalize library followed by some local CSS rules to make the page useable and accessible.
+# Style Stage
 
 ## Rules For Minimum Functionality
 
